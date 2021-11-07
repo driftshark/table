@@ -18,7 +18,7 @@ export type DeepReadonly<T> = T extends Map<infer K, infer V>
 	? keyof T extends never
 		? T
 		: {
-				-readonly [P in keyof T]: DeepReadonly<T[P]>;
+				readonly [P in keyof T]: DeepReadonly<T[P]>;
 		  }
 	: T;
 
