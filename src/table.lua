@@ -1,5 +1,5 @@
 local TS = _G[script]
-local symbol = TS.import(script, TS.getModule(script, "@driftshark", "symbol").out)
+local symbol = TS.import(script, TS.getModule(script, "@driftshark", "symbol").out.symbol)
 local None = symbol.named("None")
 
 local function shallow(tbl)
