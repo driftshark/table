@@ -57,6 +57,10 @@ local function deepEquals(a, b)
 		return true
 	end
 
+	if type(a) ~= "table" or type(b) ~= "table" then
+		return false
+	end
+
 	for k in pairs(a) do
 		local av = a[k]
 		local bv = b[k]
